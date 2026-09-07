@@ -13,6 +13,7 @@ import ProductDetails from './Pages/ProductsDetails'
 import Wishlist from './Pages/Wishtlist'
 import Registation from './Pages/Registation'
 import Login from './Pages/Login'
+import Contact from './Pages/Contact'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <Route path='productlist' element={ <ProductList/> }/>
       <Route path='productdetails' element={<ProductDetails/>} />
       <Route path='wishlist' element={<Wishlist/>}/>
+      <Route path='contact' element={ <Contact/> }/>
       <Route path='registation' element={ <Registation/> }/>
       <Route path='login' element={ <Login/>} />
 

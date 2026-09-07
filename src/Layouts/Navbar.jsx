@@ -11,6 +11,7 @@ import {
 } from "@heroui/react";
 import { NavLink } from "react-router";
 import { MdOutlineLocalPhone } from "react-icons/md";
+import { HiOutlineBars3CenterLeft } from "react-icons/hi2";
 
 export const AcmeLogo = () => {
   return (
@@ -38,29 +39,31 @@ function App() {
 
   return (
     <Navbar
+    isMenuOpen={isMenuOpen}  
       onMenuOpenChange={setIsMenuOpen}
-      className=" py-1 md:py-2 z-60"
+    className="py-1 md:py-2 z-60 transition-colors duration-300 shadow "
       classNames={{
-        wrapper: "w-full max-w-7xl px-4 md:px-8 lg:px-0 w-full",
+        wrapper: "w-full max-w-[1440px] mx-auto  px-4 md:px-8 lg:px-0 w-full",
       }}
     >
-      <NavbarContent>
+      <NavbarContent >
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="md:hidden"
         />
         <NavbarBrand className="ml-[20%] md:ml-0">
-          <img src="/logo.png" alt="" className="w-25 md:w-30 lg:text-35" />
+         <img src="/logo.png" alt="" className="" />
+
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden md:flex gap-8" justify="center">
         <NavbarItem>
           <NavLink
-            to="/"
+            to="/" 
             className={({ isActive }) =>
               `md:text-[18px] lg:text-xl font-medium transition ${
-                isActive ? "text-primary" : "text-white"
+                isActive ? "text-primary" : "text-black"
               }`
             }
           >
@@ -73,7 +76,7 @@ function App() {
             to="/about"
             className={({ isActive }) =>
               `md:text-[18px] lg:text-xl font-medium transition ${
-                isActive ? "text-primary" : "text-white"
+                isActive ? "text-primary" : "text-black"
               }`
             }
           >
@@ -83,10 +86,10 @@ function App() {
 
         <NavbarItem>
           <NavLink
-            to="/service"
+            to="/productlist"
             className={({ isActive }) =>
               `md:text-[18px] lg:text-xl font-medium transition ${
-                isActive ? "text-primary" : "text-white"
+                isActive ? "text-primary" : "text-black"
               }`
             }
           >
@@ -96,10 +99,10 @@ function App() {
 
         <NavbarItem>
           <NavLink
-            to="/work"
+            to="/blog"
             className={({ isActive }) =>
               `md:text-[18px] lg:text-xl font-medium transition ${
-                isActive ? "text-primary" : "text-white"
+                isActive ? "text-primary" : "text-black"
               }`
             }
           >
@@ -109,10 +112,10 @@ function App() {
 
         <NavbarItem>
           <NavLink
-            to="/testimonial"
+            to="/contact"
             className={({ isActive }) =>
               `md:text-[18px] lg:text-xl font-medium transition ${
-                isActive ? "text-primary" : "text-white"
+                isActive ? "text-primary" : "text-black"
               }`
             }
           >
@@ -123,15 +126,13 @@ function App() {
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <div className="flex items-center gap-x-2">
-            <MdOutlineLocalPhone />
-
-            +123 ( 456 ) ( 7890 )
+          <div className="flex items-center gap-x-2 ">
+            <Button className="bg-primary text-white font-[16px] md:text-[18px] lg:text-xl md:py-6 md:px-6">Contact Us</Button>
           </div>
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="bg-bg-card text-white z-50 mt-8">
+      <NavbarMenu className="bg-black text-white z-50 mt-2">
         {menuItems.map((item) => (
           <NavbarMenuItem key={item.path}>
             <NavLink
