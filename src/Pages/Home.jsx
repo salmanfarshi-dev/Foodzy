@@ -8,7 +8,7 @@ function Home() {
      banner section start
      ================= */}
 
-      <div className="w-full h-[80vh]">
+      <div className="w-full md:h-[80vh]">
         <img src="/banner.png" alt="" className="w-full h-full object-cover" />
       </div>
       {/* ============= 
@@ -22,7 +22,7 @@ function Home() {
       <section className="max-w-360 mx-auto px-4 md:px-6 lg:px-0 mt-4 md:mt-7 lg:mt-12">
         <div className="flex items-center gap-3">
           {shopping.map((items) => (
-            <img src={items} alt="" className="w-[33%]" />
+            <img src={items} alt="" className="w-[31%] md:w-[33%]" />
           ))}
         </div>
       </section>

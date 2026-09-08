@@ -10,8 +10,7 @@ import {
   Button,
 } from "@heroui/react";
 import { NavLink } from "react-router";
-import { MdOutlineLocalPhone } from "react-icons/md";
-import { HiOutlineBars3CenterLeft } from "react-icons/hi2";
+import { HiOutlineBars3CenterLeft, HiOutlineXMark } from "react-icons/hi2";
 
 export const AcmeLogo = () => {
   return (
@@ -43,13 +42,20 @@ function App() {
       onMenuOpenChange={setIsMenuOpen}
     className="py-1 md:py-2 z-60 transition-colors duration-300 shadow "
       classNames={{
-        wrapper: "w-full max-w-[1440px] mx-auto  px-4 md:px-8 lg:px-0 w-full",
+        wrapper: "w-full max-w-[1440px] mx-auto  px-4 md:px-8 lg:px-0",
       }}
     >
       <NavbarContent >
         <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+         
           className="md:hidden"
+            icon={
+    isMenuOpen ? (
+      <HiOutlineXMark className="text-2xl" />
+    ) : (
+      <HiOutlineBars3CenterLeft className="text-2xl" />
+    )
+  }
         />
         <NavbarBrand className="ml-[20%] md:ml-0">
          <img src="/logo.png" alt="" className="" />
