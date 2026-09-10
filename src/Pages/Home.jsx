@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import SideHeading from "../Components/SideHeading";
 import ProductCard from "../Components/ProductCard";
 import { Button } from "@heroui/react";
+import { RotatingLines } from "react-loader-spinner";
 
 const shopping = ["/shoping (1).png", "/shoping (2).png", "/shoping (3).png"];
 function Home() {
   let [data, setData] = useState([]);
   const [show, setShow] = useState(12);
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     fetch("https://dummyjson.com/products")
@@ -55,7 +57,7 @@ function Home() {
           <SideHeading tittle="Popular Products" />
 
           <div className="mt-3 md:mt-8 lg:mt-11 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
-            {data.slice(0,show).map((item) => (
+            {data.slice(0, show).map((item) => (
               <ProductCard
                 off="-25%"
                 thumbnail={item.thumbnail}
@@ -71,10 +73,29 @@ function Home() {
           <div className="flex justify-center mt-5 md:mt-9 lg:mt-16">
             {show < data.length && (
               <Button
-                  onClick={() => setShow(show + 4)}
+                onClick={() => {
+                  setLoader(true);
+
+                  setShow(show + 4);
+                  setLoader(false);
+                }}
                 className="bg-primary text-white text-xl font-medium rounded"
               >
-                Show more
+                {loader ? (
+                  <RotatingLines
+                    visible={true}
+                    height="25"
+                    width="25"
+                    color="#22d3ee"
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    ariaLabel="rotating-lines-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                  />
+                ) : (
+                  "Show more"
+                )}
               </Button>
             )}
           </div>

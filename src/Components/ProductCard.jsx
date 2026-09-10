@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa6";
 
 function ProductCard({off, thumbnail, title, des, rating, category, price, discountPercentage}) {
   return (
-    <div className="w-full md:w-72.5 bg-white border border-border2 rounded-[15px] px-3 md:px-6 py-3 md:py-6 overflow-hidden relative">
+    <div className="w-full md:w-72.5 bg-white border border-border2 rounded-[15px] px-2 md:px-6 py-3 md:py-6 overflow-hidden relative">
       <div className="absolute bg-[#F74B81] top-0 left-0 w-14 h-8 rounded-br-[20px] flex justify-center items-center">
         <p className="text-white text-xs font-normal font-lato">{off}</p>
       </div>
@@ -16,12 +16,12 @@ function ProductCard({off, thumbnail, title, des, rating, category, price, disco
           className="md:w-50 md:h-50 object-cover"
         />
       </div>
-      <p className="text-xs font-lato font-normal text-secondary2 mt-2 md:mt-4">{title}</p>
+      <p className="text-xs font-lato font-normal text-secondary2 mt-2 md:mt-4 line-clamp-1">{title}</p>
     
-      <h3 className="text-[15px] font-medium leading-6 text-cardtittle tracking-[0.48px] overflow-hidden py-2 line-clamp-2 max-h-14">
+      <h3 className="text-[15px] font-medium md:leading-6 text-cardtittle tracking-[0.48px] overflow-hidden py-2 line-clamp-2 max-h-14">
         {des}
       </h3>
-      <div className="flex items-center gap-x-3 md:gap-x-5">
+      <div className="flex items-center gap-x-2 md:gap-x-5">
         <div className="flex items-center gap-x-1 md:gap-x-2">
           <FaStar className="text-yellow-400"/>
           <FaStar className="text-yellow-400"/>
