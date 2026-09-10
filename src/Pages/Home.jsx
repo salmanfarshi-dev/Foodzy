@@ -3,6 +3,7 @@ import SideHeading from "../Components/SideHeading";
 import ProductCard from "../Components/ProductCard";
 import { Button } from "@heroui/react";
 import { RotatingLines } from "react-loader-spinner";
+import DailyBestSells from "../Layouts/DailyBestSells";
 
 const shopping = ["/shoping (1).png", "/shoping (2).png", "/shoping (3).png"];
 function Home() {
@@ -56,7 +57,7 @@ function Home() {
         <div className=" mt-5 md:mt-10 lg:mt-14">
           <SideHeading tittle="Popular Products" />
 
-          <div className="mt-3 md:mt-8 lg:mt-11 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+          <div className="mt-3 md:mt-8 lg:mt-11 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
             {data.slice(0, show).map((item) => (
               <ProductCard
                 off="-25%"
@@ -105,6 +106,9 @@ function Home() {
      Popular Products section end
      ================= */}
       </section>
+
+   <DailyBestSells/>
+
     </>
   );
 }
