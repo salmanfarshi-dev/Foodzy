@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SideHeading from "../Components/SideHeading";
+import ProductCard from "../Components/ProductCard";
+import { Button } from "@heroui/react";
 
 const shopping = ["/shoping (1).png", "/shoping (2).png", "/shoping (3).png"];
 function Home() {
+  let [data, setData] = useState([]);
+  const [show, setShow] = useState(12);
+
+  useEffect(() => {
+    fetch("https://dummyjson.com/products")
+      .then((res) => res.json())
+      .then((data) => setData(data.products));
+  }, []);
+
+  console.log(data);
+
   return (
     <>
       {/* ============= 
@@ -41,7 +54,30 @@ function Home() {
         <div className=" mt-5 md:mt-10 lg:mt-14">
           <SideHeading tittle="Popular Products" />
 
-          <div className="mt-3 md:mt-8 lg:mt-11"></div>
+          <div className="mt-3 md:mt-8 lg:mt-11 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+            {data.slice(0,show).map((item) => (
+              <ProductCard
+                off="-25%"
+                thumbnail={item.thumbnail}
+                title={item.title}
+                des={item.description}
+                rating={item.rating}
+                category={item.category}
+                price={item.price}
+                discountPercentage={item.discountPercentage}
+              />
+            ))}
+          </div>
+          <div className="flex justify-center mt-5 md:mt-9 lg:mt-16">
+            {show < data.length && (
+              <Button
+                  onClick={() => setShow(show + 4)}
+                className="bg-primary text-white text-xl font-medium rounded"
+              >
+                Show more
+              </Button>
+            )}
+          </div>
         </div>
 
         {/* ============= 
