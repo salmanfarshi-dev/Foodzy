@@ -4,6 +4,7 @@ import ProductCard from "../Components/ProductCard";
 import { Button } from "@heroui/react";
 import { RotatingLines } from "react-loader-spinner";
 import DailyBestSells from "../Layouts/DailyBestSells";
+import DealsOfTheDay from "../Layouts/DealsOfTheDay";
 
 const shopping = ["/shoping (1).png", "/shoping (2).png", "/shoping (3).png"];
 function Home() {
@@ -17,7 +18,6 @@ function Home() {
       .then((data) => setData(data.products));
   }, []);
 
-  console.log(data);
 
   return (
     <>
@@ -77,8 +77,10 @@ function Home() {
                 onClick={() => {
                   setLoader(true);
 
-                  setShow(show + 4);
+                 setTimeout(()=>{
+                   setShow(show + 4);
                   setLoader(false);
+                 },500)
                 }}
                 className="bg-primary text-white text-xl font-medium rounded"
               >
@@ -108,6 +110,7 @@ function Home() {
       </section>
 
       <DailyBestSells />
+      <DealsOfTheDay/>
     </>
   );
 }
