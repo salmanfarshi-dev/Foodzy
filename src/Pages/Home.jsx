@@ -107,8 +107,7 @@ function Home() {
      ================= */}
       </section>
 
-   <DailyBestSells/>
-
+      <DailyBestSells />
     </>
   );
 }
