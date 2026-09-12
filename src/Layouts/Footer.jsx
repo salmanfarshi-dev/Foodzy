@@ -62,7 +62,7 @@ const footerimage = [
 
 function Footer() {
   return (
-    <footer className="bg-bg py-2 md:py-10 lg:py-20">
+    <footer className="bg-bg py-2 md:pt-10 lg:pt-20">
       <div className="max-w-360 mx-auto px-4 md:px-6 lg:px-0 mt-4 md:mt-7 lg:mt-12">
         <div className="grid grid-cols-12 max-w-fit  mx-auto gap-7 md:gap-10 lg:gap-15">
           <div className="col-span-12 md:col-span-3">
@@ -126,11 +126,11 @@ function Footer() {
               Subscribe Our Newslatter
             </h3>
 
-            <div className="mt-3 md:mt-4 border border-border1 py-1 md:py-2 px-2 rounded relative">
+            <div className="mt-3 md:mt-4 border border-gray-300 py-1 md:py-2 px-2 rounded relative">
               <input
                 type="email"
                 placeholder="Search here..."
-                className="focus:outline-none placeholder:text-footer-color text-footer-color w-[90%]"
+                className="focus:outline-none placeholder:text-footer-color text-footer-color w-[90%] "
               />
 
               <BsSendFill className="absolute top-1/2 -translate-1/2 right-0 cursor-pointer" />
@@ -163,6 +163,9 @@ function Footer() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="py-2 md:py-3 mt-3 md:mt-8 lg:mt-14 text-center border-t border-border2">
+        <p className="text-xs md:text-sm text-secondary">© 2025 <span className="text-primary ">foodzy</span>, All rights reserved.</p>
       </div>
     </footer>
   );

@@ -27,7 +27,7 @@ function DealsOfTheDay() {
       </div>
 
       <div className="mt-5 md:mt-8 lg:mt-12">
-        <div className="flex flex-wrap justify-between gap-y-50">
+        <div className="flex flex-wrap justify-between gap-x-2 gap-y-50">
           {data.slice(0, show).map((items) => (
             <div className="bg-bg rounded-xl md:w-85 w-41 h-auto flex justify-center items-center relative md:hover:-translate-y-3 duration-300">
               <img src={items.thumbnail} alt="" />

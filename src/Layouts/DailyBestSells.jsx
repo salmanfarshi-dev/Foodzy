@@ -23,13 +23,13 @@ function DailyBestSells() {
         <SideHeading tittle="Daily Best Sells" />
 
         <div className="pt-5 md:pt-7 lg:pt-10">
-          <div className="grid grid-cols-12 gap-2 md:gap-3 lg:gap-4">
+          <div className="grid grid-cols-12 gap-5 md:gap-3 lg:gap-4">
             <div className="col-span-12 md:col-span-3">
              <div className="flex justify-center items-center">
                <img
                 src="/bestseller.png"
                 alt=""
-                className="w-fit h-98 md:h-112 object-cover rounded-xl"
+                className="w-fit h-80 md:h-112 object-cover rounded-xl"
               />
              </div>
             </div>

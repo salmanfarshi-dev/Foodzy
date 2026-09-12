@@ -31,7 +31,7 @@ function App() {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Services", path: "/service" },
+    { name: "Product", path: "/productlist" },
     { name: "Blogs", path: "/blog" },
     { name: "Contact Us", path: "/contact" },
   ];
