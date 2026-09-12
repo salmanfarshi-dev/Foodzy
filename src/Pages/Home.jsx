@@ -6,6 +6,7 @@ import { RotatingLines } from "react-loader-spinner";
 import DailyBestSells from "../Layouts/DailyBestSells";
 import DealsOfTheDay from "../Layouts/DealsOfTheDay";
 import WhyChoose from "../Layouts/WhyChoose";
+import OrganicHealth from "../Layouts/OrganicHealth";
 
 const shopping = ["/shoping (1).png", "/shoping (2).png", "/shoping (3).png"];
 function Home() {
@@ -113,6 +114,7 @@ function Home() {
       <DailyBestSells />
       <DealsOfTheDay/>
       <WhyChoose/>
+      <OrganicHealth/>
     </>
   );
 }
