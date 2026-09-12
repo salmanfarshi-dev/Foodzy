@@ -64,7 +64,7 @@ function OfferSection() {
       >
         {offer.map((item) => (
           <SwiperSlide key={item.id} className="h-auto">
-            <div className="flex items-center gap-x-3 md:gap-x-5 bg-bg px-2 md:px-4 py-2 md:py-3 rounded-[10px] shadow h-full min-h-[70px]">
+            <div className="flex items-center gap-x-3 md:gap-x-5 bg-bg px-2 md:px-4 py-2 md:py-3 rounded-[10px] shadow h-full min-h-17.5">
               <img
                 src={item.icon}
                 alt={item.title}

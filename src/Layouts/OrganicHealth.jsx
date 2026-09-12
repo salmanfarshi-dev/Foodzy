@@ -68,8 +68,7 @@ function OrganicHealth() {
         bg-center bg-cover bg-no-repeat
         rounded-xl
         flex flex-col justify-center items-end
-      "
-          >
+      ">
             <div className="px-5 sm:px-7 md:px-10 flex flex-col items-end  py-3 md:py-0">
               <p
                 className="text-[17px] sm:text-lg md:text-xl lg:text-[24px] font-semibold

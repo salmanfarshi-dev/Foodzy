@@ -15,7 +15,7 @@ function Searchbar() {
                 <p className='text-black text-[15px]md:text-xl hidden md:block md:flex gap-x-3 items-center'> <MdOutlineLocalPhone/>  +123 ( 456 ) ( 7890 )</p>
 
                 <div className="flex items-center border border-border1 pr-2 relative md:w-80 rounded-xl">
-                    <input type="text" placeholder='Search for items....' className=' px-2 py-2 md:py-3 focus:outline-0 w-[80%] md:w-65'/>
+                    <input type="text" placeholder='Search for items....' className=' px-2 py-2 md:py-3 focus:outline-0 w-[80%] md:w-65 text-xs md:text-[16px]'/>
                    <div className="bg-primary absolute right-0 h-full text-white text-[15px] w-8 flex justify-center items-center rounded-r">
                      <FiSearch  />
                    </div>

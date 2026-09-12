@@ -29,7 +29,7 @@ function DealsOfTheDay() {
       <div className="mt-5 md:mt-8 lg:mt-12">
         <div className="flex flex-wrap justify-between gap-y-50">
           {data.slice(0, show).map((items) => (
-            <div className="bg-bg rounded-xl md:w-85 w-43 h-auto flex justify-center items-center relative md:hover:-translate-y-3 duration-300">
+            <div className="bg-bg rounded-xl md:w-85 w-41 h-auto flex justify-center items-center relative md:hover:-translate-y-3 duration-300">
               <img src={items.thumbnail} alt="" />
 
               <div className="absolute w-[90%] mt-80 md:mt-90 bg-white px-2 md:px-4 lg:px-5 py-2 md:py-3 lg:py-5 rounded-xl shadow ">
@@ -43,11 +43,11 @@ function DealsOfTheDay() {
 
                 <div className="flex items-center gap-x-2 md:gap-x-5 py-1 md:py-2">
                   <div className="flex items-center gap-x-1 md:gap-x-2">
-                    <FaStar className="text-yellow-400" />
-                    <FaStar className="text-yellow-400" />
-                    <FaStar className="text-yellow-400" />
-                    <FaStar className="text-yellow-400" />
-                    <FaStar className="text-yellow-400" />
+                    <FaStar className="text-yellow-400 text-sm md:text-[16px]" />
+                    <FaStar className="text-yellow-400 text-sm md:text-[16px]" />
+                    <FaStar className="text-yellow-400 text-sm md:text-[16px]" />
+                    <FaStar className="text-yellow-400 text-sm md:text-[16px]" />
+                    <FaStar className="text-yellow-400 text-sm md:text-[16px]" />
                   </div>
                   <span className="text-[#B6B6B6] text-sm font-lato">
                     ({items.rating})
