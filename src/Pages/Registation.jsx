@@ -7,7 +7,8 @@ function Registation() {
   return (
   <>
   <PageBreadcrumb title="Registation"/>
-    <div className='md:w-150 border border-secondary2 shadow mx-auto rounded-[5px] px-3 md:px-5 py-3 md:py-6 my-3 md:my-8 lg:my-15'>
+   <div className="px-3 md:px-0">
+     <div className='md:w-150 border border-secondary2 shadow mx-auto rounded-[5px] px-3 md:px-5 py-3 md:py-6 my-3 md:my-8 lg:my-15'>
       <div className="flex justify-center items-center text-center">
         <img src="/registrationlogo.png" alt="" />
       </div>
@@ -25,7 +26,7 @@ function Registation() {
         name="firstname"
         placeholder="Enter your First Name"
         type="text"
-        className='w-[45%]'
+        className='md:w-[45%]'
       />
       <Input
         isRequired
@@ -35,7 +36,7 @@ function Registation() {
         name="lastname"
         placeholder="Enter your Last Name"
         type="text"
-          className='w-[45%]'
+          className='md:w-[45%]'
       />
 
       <Input
@@ -46,7 +47,7 @@ function Registation() {
         name="email"
         placeholder="Enter your email"
         type="email"
-          className='w-[45%]'
+          className='md:w-[45%]'
       />
       <Input
         isRequired
@@ -56,7 +57,19 @@ function Registation() {
         name="phone"
         placeholder="Enter your Phone Number"
         type="tel"
-          className='w-[45%]'
+          className='md:w-[45%]'
+      />
+     </div>
+     <div className="w-full">
+      <Input
+        isRequired
+        errorMessage="Please enter Password"
+        label="Password"
+        labelPlacement="outside"
+        name="password"
+        placeholder="Enter your password"
+        type="password"
+       
       />
      </div>
      <Input
@@ -78,7 +91,7 @@ function Registation() {
         name="city"
         placeholder="City"
         type="text"
-        className='w-[45%]'
+        className='md:w-[45%]'
       />
       <Input
        
@@ -88,7 +101,7 @@ function Registation() {
         name="PostCode"
         placeholder="Post Code"
         type="text"
-          className='w-[45%]'
+          className='md:w-[45%]'
       />
 
       <Input
@@ -99,7 +112,7 @@ function Registation() {
         name="country"
         placeholder="Country"
         type="text"
-          className='w-[45%]'
+          className='md:w-[45%]'
       />
       <Input
         isRequired
@@ -109,7 +122,7 @@ function Registation() {
         name="region"
         placeholder="Region/state"
         type="tel"
-          className='w-[45%]'
+          className='md:w-[45%]'
       />
      </div>
 
@@ -122,6 +135,7 @@ function Registation() {
       
     </Form>
     </div>
+   </div>
   </>
   )
 }
