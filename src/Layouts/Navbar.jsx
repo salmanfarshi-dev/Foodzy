@@ -33,7 +33,7 @@ function App() {
     { name: "About Us", path: "/about" },
     { name: "Product", path: "/productlist" },
     { name: "Blogs", path: "/blog" },
-    { name: "Contact Us", path: "/contact" },
+    { name: "Faq", path: "/faq" },
   ];
 
   return (
@@ -58,7 +58,7 @@ function App() {
   }
         />
         <NavbarBrand className="ml-[20%] md:ml-0">
-         <img src="/logo.png" alt="" className="" />
+         <img src="/logo.png" alt="" />
 
         </NavbarBrand>
       </NavbarContent>
@@ -118,14 +118,14 @@ function App() {
 
         <NavbarItem>
           <NavLink
-            to="/contact"
+            to="/faq"
             className={({ isActive }) =>
               `md:text-[18px] lg:text-xl font-medium transition ${
                 isActive ? "text-primary" : "text-black"
               }`
             }
           >
-            Contact
+            Faq
           </NavLink>
         </NavbarItem>
       </NavbarContent>
