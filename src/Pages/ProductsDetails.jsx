@@ -1,6 +1,7 @@
 import React from "react";
 import PageBreadcrumb from "../Components/PageBreadcrumb";
 import { Button, Checkbox } from "@heroui/react";
+import { FaStar } from "react-icons/fa";
 
 function ProductsDetails() {
   return (
@@ -37,6 +38,20 @@ function ProductsDetails() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. In, iure
               minus error doloribus saepe natus?
             </p>
+
+            <div className="flex items-center gap-2 md:gap-5 my-3 md:my-5">
+              <div className="flex items-center gap-x-1 md:gap-x-2">
+                        <FaStar className="text-yellow-400"/>
+                        <FaStar className="text-yellow-400"/>
+                        <FaStar className="text-yellow-400"/>
+                        <FaStar className="text-yellow-400"/>
+                        <FaStar className="text-yellow-400"/>
+                      </div>
+                      <p className="text-xs md:text-sm text-secondary2">( 40 review )</p>
+            </div>
+            <div className="mt-3 md:mt-6 flex flex-col gap-2 md:gap-4">
+              
+            </div>
           </div>
         </div>
       </section>
