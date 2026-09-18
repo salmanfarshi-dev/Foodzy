@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PageBreadcrumb from "../Components/PageBreadcrumb";
 import { Button, Checkbox } from "@heroui/react";
 import { FaStar } from "react-icons/fa";
 
 function ProductsDetails() {
+  
+
+   
+
   return (
     <>
       <PageBreadcrumb title="Productdetails" />
@@ -49,9 +53,49 @@ function ProductsDetails() {
                       </div>
                       <p className="text-xs md:text-sm text-secondary2">( 40 review )</p>
             </div>
-            <div className="mt-3 md:mt-6 flex flex-col gap-2 md:gap-4">
-              
-            </div>
+           <div className="mt-3 md:mt-6 flex flex-col gap-2 md:gap-4">
+
+  <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
+    <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
+      Brand
+    </p>
+    <span>:</span>
+    <span className="text-secondary2">EST co</span>
+  </div>
+
+  <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
+    <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
+      SKU
+    </p>
+    <span>:</span>
+    <span className="text-secondary2">EST co</span>
+  </div>
+
+  <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
+    <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
+      Warranty Information
+    </p>
+    <span>:</span>
+    <span className="text-secondary2">EST co</span>
+  </div>
+
+  <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
+    <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
+      Shipping Information
+    </p>
+    <span>:</span>
+    <span className="text-secondary2">EST co</span>
+  </div>
+
+  <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
+    <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
+      Availability Status
+    </p>
+    <span>:</span>
+    <span className="text-secondary2">EST co</span>
+  </div>
+
+</div>
           </div>
         </div>
       </section>
