@@ -2,12 +2,9 @@ import React, { useEffect, useState } from "react";
 import PageBreadcrumb from "../Components/PageBreadcrumb";
 import { Button, Checkbox } from "@heroui/react";
 import { FaStar } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa6";
 
 function ProductsDetails() {
-  
-
-   
-
   return (
     <>
       <PageBreadcrumb title="Productdetails" />
@@ -45,57 +42,87 @@ function ProductsDetails() {
 
             <div className="flex items-center gap-2 md:gap-5 my-3 md:my-5">
               <div className="flex items-center gap-x-1 md:gap-x-2">
-                        <FaStar className="text-yellow-400"/>
-                        <FaStar className="text-yellow-400"/>
-                        <FaStar className="text-yellow-400"/>
-                        <FaStar className="text-yellow-400"/>
-                        <FaStar className="text-yellow-400"/>
-                      </div>
-                      <p className="text-xs md:text-sm text-secondary2">( 40 review )</p>
+                <FaStar className="text-yellow-400" />
+                <FaStar className="text-yellow-400" />
+                <FaStar className="text-yellow-400" />
+                <FaStar className="text-yellow-400" />
+                <FaStar className="text-yellow-400" />
+              </div>
+              <p className="text-xs md:text-sm text-secondary2">
+                ( 40 review )
+              </p>
             </div>
-           <div className="mt-3 md:mt-6 flex flex-col gap-2 md:gap-4">
+            <div className="mt-3 md:mt-6 flex flex-col gap-2 md:gap-4">
+              <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
+                <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
+                  Brand
+                </p>
+                <span>:</span>
+                <span className="text-secondary2">EST co</span>
+              </div>
 
-  <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
-    <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
-      Brand
-    </p>
-    <span>:</span>
-    <span className="text-secondary2">EST co</span>
-  </div>
+              <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
+                <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
+                  SKU
+                </p>
+                <span>:</span>
+                <span className="text-secondary2">EST co</span>
+              </div>
 
-  <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
-    <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
-      SKU
-    </p>
-    <span>:</span>
-    <span className="text-secondary2">EST co</span>
-  </div>
+              <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
+                <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
+                  Warranty Information
+                </p>
+                <span>:</span>
+                <span className="text-secondary2">EST co</span>
+              </div>
 
-  <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
-    <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
-      Warranty Information
-    </p>
-    <span>:</span>
-    <span className="text-secondary2">EST co</span>
-  </div>
+              <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
+                <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
+                  Shipping Information
+                </p>
+                <span>:</span>
+                <span className="text-secondary2">EST co</span>
+              </div>
 
-  <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
-    <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
-      Shipping Information
-    </p>
-    <span>:</span>
-    <span className="text-secondary2">EST co</span>
-  </div>
+              <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
+                <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
+                  Availability Status
+                </p>
+                <span>:</span>
+                <span className="text-secondary2">EST co</span>
+              </div>
+              <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
+                <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
+                  weight
+                </p>
+                <span>:</span>
+                <span className="text-secondary2">4 Grams</span>
+              </div>
+            </div>
 
-  <div className="grid grid-cols-[150px_20px_1fr] md:grid-cols-[200px_20px_1fr] items-center">
-    <p className="text-sm md:text-[16px] font-semibold text-cardtittle capitalize">
-      Availability Status
-    </p>
-    <span>:</span>
-    <span className="text-secondary2">EST co</span>
-  </div>
 
-</div>
+            <div className="mt-3 md:mt-7 lg:mt-12">
+              <p className="text-xl md:text-[28px] font-semibold text-primary tracking-[.48px]">$ 120.44  <span className="text-secondary2 text-sm md:text-[16px] font-normal line-through">$ 28.25</span></p>
+            </div>
+
+            <div className="mt-3 md:mt-6 flex items-center gap-2 md:gap-3 lg:gap-4">
+              <div className="flex gap-x-1 md:gap-x-2 items-center">
+                <div className="flex justify-center items-center w-10 h-10  md:w-14 md:h-14 border border-border2 shadow rounded text-sm md:text-xl font-semibold">1</div>
+                <div className="flex flex-col gap-1 md:gap-2">
+                  <div className="w-5 h-5 md:w-6 md:h-6 border border-border2 shadow rounded flex justify-center items-center font-semibold cursor-pointer">+</div>
+                  <div className="w-5 h-5 md:w-6 md:h-6 border border-border2 shadow rounded flex justify-center items-center font-semibold cursor-pointer">-</div>
+                  
+                </div>
+              </div>
+
+              <Button className="bg-primary rounded text-white font-sm md:text-xl tracking-[0.48px] md:py-6.5 md:px-8">Add to cart</Button>
+
+               <div className="flex justify-center items-center w-10 h-10  md:w-14 md:h-14 border border-border2 shadow rounded text-sm md:text-xl font-semibold cursor-pointer">
+                <FaRegHeart />
+
+               </div>
+            </div>
           </div>
         </div>
       </section>
