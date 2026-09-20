@@ -3,8 +3,17 @@ import PageBreadcrumb from "../Components/PageBreadcrumb";
 import { Button, Checkbox } from "@heroui/react";
 import { FaStar } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
+import ProductCard from "../Components/ProductCard";
 
 function ProductsDetails() {
+  let [data, setData] = useState([]);
+  const [Active, setActive] = useState("Description");
+
+  useEffect(() => {
+    fetch("https://dummyjson.com/products")
+      .then((res) => res.json())
+      .then((data) => setData(data.products));
+  }, []);
   return (
     <>
       <PageBreadcrumb title="Productdetails" />
@@ -101,29 +110,154 @@ function ProductsDetails() {
               </div>
             </div>
 
-
             <div className="mt-3 md:mt-7 lg:mt-12">
-              <p className="text-xl md:text-[28px] font-semibold text-primary tracking-[.48px]">$ 120.44  <span className="text-secondary2 text-sm md:text-[16px] font-normal line-through">$ 28.25</span></p>
+              <p className="text-xl md:text-[28px] font-semibold text-primary tracking-[.48px]">
+                $ 120.44{" "}
+                <span className="text-secondary2 text-sm md:text-[16px] font-normal line-through">
+                  $ 28.25
+                </span>
+              </p>
             </div>
 
             <div className="mt-3 md:mt-6 flex items-center gap-2 md:gap-3 lg:gap-4">
               <div className="flex gap-x-1 md:gap-x-2 items-center">
-                <div className="flex justify-center items-center w-10 h-10  md:w-14 md:h-14 border border-border2 shadow rounded text-sm md:text-xl font-semibold">1</div>
+                <div className="flex justify-center items-center w-10 h-10  md:w-14 md:h-14 border border-border2 shadow rounded text-sm md:text-xl font-semibold">
+                  1
+                </div>
                 <div className="flex flex-col gap-1 md:gap-2">
-                  <div className="w-5 h-5 md:w-6 md:h-6 border border-border2 shadow rounded flex justify-center items-center font-semibold cursor-pointer">+</div>
-                  <div className="w-5 h-5 md:w-6 md:h-6 border border-border2 shadow rounded flex justify-center items-center font-semibold cursor-pointer">-</div>
-                  
+                  <div className="w-5 h-5 md:w-6 md:h-6 border border-border2 shadow rounded flex justify-center items-center font-semibold cursor-pointer">
+                    +
+                  </div>
+                  <div className="w-5 h-5 md:w-6 md:h-6 border border-border2 shadow rounded flex justify-center items-center font-semibold cursor-pointer">
+                    -
+                  </div>
                 </div>
               </div>
 
-              <Button className="bg-primary rounded text-white font-sm md:text-xl tracking-[0.48px] md:py-6.5 md:px-8">Add to cart</Button>
+              <Button className="bg-primary rounded text-white font-sm md:text-xl tracking-[0.48px] md:py-6.5 md:px-8">
+                Add to cart
+              </Button>
 
-               <div className="flex justify-center items-center w-10 h-10  md:w-14 md:h-14 border border-border2 shadow rounded text-sm md:text-xl font-semibold cursor-pointer">
+              <div className="flex justify-center items-center w-10 h-10  md:w-14 md:h-14 border border-border2 shadow rounded text-sm md:text-xl font-semibold cursor-pointer">
                 <FaRegHeart />
-
-               </div>
+              </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-8 md:mt-13 lg:mt-16">
+          <div className="border border-border2 px-2 md:px-4 lg:px-6 py-2 md:py-4 lg:py-6 rounded shadow">
+            <div className="flex items-center gap-3 md:gap-7 lg:gap-10">
+              <Button
+                onClick={() => setActive("Description")}
+                className={`text-sm md:text-[17px] font-semibold bg-transparent pb-2 md:pb-3 ${Active === "Description" ? "text-primary border-b-2 border-primary" : "text-cardtittle"}`}
+              >
+                Description
+              </Button>
+              <Button
+                onClick={() => setActive("Information")}
+                className={`text-sm md:text-[17px] font-semibold bg-transparent pb-2 md:pb-3 ${Active === "Information" ? "text-primary border-b-2 border-primary" : "text-cardtittle"}`}
+              >
+                Information
+              </Button>
+              <Button
+                onClick={() => setActive("Review")}
+                className={`text-sm md:text-[17px] font-semibold bg-transparent pb-2 md:pb-3 ${Active === "Review" ? "text-primary border-b-2 border-primary" : "text-cardtittle"}`}
+              >
+                Review
+              </Button>
+            </div>
+
+            <div className="mt-4 md:mt-8 lg:mt-10">
+              <div className="">
+                {Active === "Description" && (
+                  <p className="text-xs md:text-sm text-secondary">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error in vero sapiente odio, error dolore vero temporibus
+                    consequatur, nobis veniam odit dignissimos consectetur quae
+                    in perferendis doloribusdebitis corporis, eaque dicta,
+                    repellat amet, illum adipisci vel perferendis dolor! Quis
+                    vel consequuntur repellat distinctio rem. Corrupti ratione
+                    alias odio, error dolore temporibus consequatur, nobis
+                    veniam odit laborum dignissimos consectetur quae vero in
+                    perferendis provident quis. Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Odit ratione velit dolorem,
+                    inventore exercitationem ut incidunt eos excepturi
+                    repellendus voluptas nesciunt eaque similique soluta nulla
+                    sint error voluptatem consectetur. Commodi.
+                  </p>
+                )}
+              </div>
+              <div className="">
+                {Active === "Information" && (
+                  <p className="text-xs md:text-sm text-secondary">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error in vero sapiente odio, error dolore vero temporibus
+                    consequatur, nobis veniam odit dignissimos consectetur quae
+                    in perferendis doloribusdebitis corporis, eaque dicta,
+                    repellat amet, illum adipisci vel perferendis dolor! Quis
+                    vel consequuntur repellat distinctio rem. Corrupti ratione
+                    alias odio, error dolore temporibus consequatur, nobis
+                    veniam odit laborum dignissimos consectetur quae vero in
+                    perferendis provident quis.
+                  </p>
+                )}
+              </div>
+              <div className="">
+                {Active === "Review" && (
+                  <p className="text-xs md:text-sm text-secondary">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error in vero sapiente odio, error dolore vero temporibus
+                    consequatur, nobis veniam odit dignissimos consectetur quae
+                    in perferendis doloribusdebitis corporis, eaque dicta,
+                    repellat amet, illum adipisci vel perferendis dolor! Quis
+                    vel consequuntur repellat distinctio rem. Corrupti ratione
+                    alias odio, error dolore temporibus consequatur, nobis
+                    veniam odit laborum dignissimos consectetur quae vero in
+                    perferendis provident quis. Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Odit ratione velit dolorem,
+                    inventore exercitationem ut incidunt eos excepturi
+                    repellendus voluptas nesciunt eaque similique soluta nulla
+                    sint error voluptatem consectetur. Commodi. Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Commodi
+                    voluptatem, facere repudiandae consequatur velit hic
+                    veritatis culpa vel delectus quibusdam quo amet tempora
+                    nulla molestiae blanditiis vero dolorem ipsam enim iste est
+                    esse mollitia dolores. Corrupti, ducimus. Non, id saepe!
+                  </p>
+                )}
+              </div>
+            </div>
+
+            <div className="mt-3 md:mt-6 lg:mt-8 ">
+              <h5 className="text-cardtittle text-sm md:text-[17px] font-semibold font-medium border-b border-border1 pb-2 md:pb-3">
+                Packaging & Delivery
+              </h5>
+
+              <p className="mt-2 md:mt-4 text-xs md:text-sm text-secondary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+                in vero perferendis dolor! Quis vel consequuntur repellat
+                distinctio rem. Corrupti ratione alias odio, error dolore
+                temporibus consequatur, nobis veniam odit laborum dignissimos
+                consectetur quae vero in perferendis provident quis.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-5 md:mt-10 lg:mt-16 flex justify-between">
+          {data.slice(0, 5).map((items) => (
+            <ProductCard
+              className="md:w-66!"
+              thumbnail={items.thumbnail}
+              title={items.title}
+              des={items.description}
+              rating={items.rating}
+              category={items.category}
+              price={items.price}
+              discountPercentage={items.discountPercentage}
+            />
+          ))}
         </div>
       </section>
     </>
