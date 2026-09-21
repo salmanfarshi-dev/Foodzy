@@ -4,6 +4,7 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa6";
 import { BsCart3 } from "react-icons/bs";
 import { MdOutlineLocalPhone } from "react-icons/md";
+import { Link } from "react-router";
 
 function Searchbar() {
   return (
@@ -34,11 +35,11 @@ function Searchbar() {
             <div className="flex items-center gap-x-2 text-[15px] font-medium text-black cursor-pointer">
               <FaRegHeart className="size-6" />
 
-              <span className="hidden md:block">Wishlist</span>
+              <Link to="wishlist"><span className="hidden md:block">Wishlist</span></Link>
             </div>
             <div className="flex items-center gap-x-2 text-[15px] font-medium text-black cursor-pointer">
               <BsCart3 className="size-6" />
-              <span className="hidden md:block">Cart</span>
+             <Link to="card"> <span className="hidden md:block">Cart</span></Link>
             </div>
           </div>
         </div>
