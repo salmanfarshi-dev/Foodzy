@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PageBreadcrumb from '../Components/PageBreadcrumb';
 
 
 const posts = [
@@ -47,6 +48,7 @@ function Blog() {
  
   return (
     <div className="">
+       <PageBreadcrumb title="Blog" />
       
  
       <main className="max-w-360 mx-auto px-4 md:px-6 lg:px-0 mt-4 md:mt-7 lg:mt-12">
