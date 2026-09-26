@@ -60,7 +60,7 @@ function Blog() {
             {posts.map((p, i) => (
               <article key={i} className="w-full flex-shrink-0 px-1">
                 <div className="overflow-hidden mb-6 bg-white flex text-center justify-center items-center mx-auto">
-                 <img src={p.image} alt="" className='w-full h-[500px] object-cover'/>
+                 <img src={p.image} alt="" className='w-full md:h-[500px] object-cover'/>
                 </div>
                 <div className="text-xs mb-2 text-green-800">
                   By {p.author} &nbsp;·&nbsp; {p.date} &nbsp;·&nbsp; {p.comments} comments

@@ -3,11 +3,14 @@ import React, { useEffect, useState } from "react";
 import { Pagination, Button } from "@heroui/react";
 
 import ProductCard from "../Components/ProductCard";
+import PageBreadcrumb from "../Components/PageBreadcrumb";
 
 function ProductList() {
   const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState([]);
-  const [select, setSelect] = useState(8);
+ const [select, setSelect] = useState(
+  window.innerWidth < 768 ? 4 : 8
+);
 
   useEffect(() => {
     fetch("https://dummyjson.com/products")
@@ -29,8 +32,11 @@ function ProductList() {
   const pageCount = Math.ceil(data.length / select);
 
   return (
-    <section className="max-w-360 mx-auto px-4 md:px-6 lg:px-0 mt-4 md:mt-7 lg:mt-12">
-      {/* Top */}
+    <section className="">
+      <PageBreadcrumb title="ProductList"/>
+
+     <div className="max-w-360 mx-auto px-4 md:px-6 lg:px-0 mt-4 md:mt-7 lg:mt-12">
+       {/* Top */}
       <div className="bg-bg p-2 md:p-3 rounded flex items-center justify-between">
         <p className="text-xs md:text-sm text-secondary2 font-normal tracking-[0.48px]">
           We found {data.length} items for you!
@@ -106,6 +112,7 @@ function ProductList() {
           Next
         </Button>
       </div>
+     </div>
     </section>
   );
 }
