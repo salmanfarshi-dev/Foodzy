@@ -43,15 +43,15 @@ function Card() {
             </div>
           </div>
 
-          <div className=" bg-bg mt-2 md:mt-5 lg:mt-10">
+          <div className=" bg-bg mt-2 md:mt-3 lg:mt-4">
             <div className="p-2 md:p-5 flex flex-col gap-3 md:gap-7">
               <div className="grid grid-cols-[2fr_1fr_1fr_1fr_50px] items-center  ">
                 <div className="flex items-center gap-3">
                   <img
-                    src="/public/→ product-1-1.jpg.png"
-                    className="w-10 h-10 object-contain"
+                    src="/→ product-1-1.jpg.png"
+                    className="w-6 h-6 md:w-10 md:h-10 object-contain"
                   />
-                  <span className="text-xs md:text-sm text-secondary2">
+                  <span className="text-xs md:text-sm text-secondary2 ">
                     This is prodcut
                   </span>
                 </div>
@@ -61,7 +61,7 @@ function Card() {
                 </div>
 
                 <div>
-                  <div className="flex items-center gap-2 md:gap-4 lg:gap-6 bg-white px-2  py-1 md:px-5 md:py-2 rounded w-fit">
+                  <div className="flex items-center gap-2 md:gap-4 lg:gap-6 bg-white px-1  py-1 md:px-5 md:py-2 rounded w-fit text-xs">
                     <button className="cursor-pointer">-</button>
                     <span>1</span>
                     <button className="cursor-pointer">+</button>
@@ -76,43 +76,12 @@ function Card() {
                   <RiDeleteBin6Line className="text-secondary2 cursor-pointer" />
                 </div>
               </div>
-              <div className="grid grid-cols-[2fr_1fr_1fr_1fr_50px] items-center ">
-                <div className="flex items-center gap-3">
-                  <img
-                    src="/public/→ product-1-1.jpg.png"
-                    className="w-10 h-10 object-contain"
-                  />
-                  <span className="text-xs md:text-sm text-secondary2">
-                    This is prodcut
-                  </span>
-                </div>
-
-                <div className="text-xs md:text-sm text-secondary2">
-                  $ 10.225
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-2 md:gap-4 lg:gap-6 bg-white px-2  py-1 md:px-5 md:py-2 rounded w-fit">
-                    <button className="cursor-pointer">-</button>
-                    <span>1</span>
-                    <button className="cursor-pointer">+</button>
-                  </div>
-                </div>
-
-                <div className="text-xs md:text-sm text-secondary2">
-                  $ 30.25
-                </div>
-
-                <div>
-                  <RiDeleteBin6Line className="text-secondary2 cursor-pointer" />
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="mt-5 md:mt-8 lg:mt-14">
+        <div className="mt-5 md:mt-8 lg:mt-14">
         <h4 className="text-center text-cardtittle text-xl md:text-[26px] lg:text-[30px] font-bold tracnking-[0.48px]">
           Popular Products
         </h4>
@@ -122,10 +91,10 @@ function Card() {
           vel facilisis.
         </p>
       </div>
-      <div className="mt-5 md:mt-10 lg:mt-16 flex justify-between">
+      <div className="mt-5 md:mt-10 lg:mt-16 flex justify-between flex-wrap">
         {data.slice(10, 15).map((items) => (
           <ProductCard
-            className="md:w-66!"
+            className="w-full sm:w-[calc(50%-8px)] md:w-[calc(33.33%-14px)] lg:w-[calc(20%-20px)]"
             thumbnail={items.thumbnail}
             title={items.title}
             des={items.description}
@@ -136,6 +105,9 @@ function Card() {
           />
         ))}
       </div>
+      </div>
+
+      
     </section>
   );
 }

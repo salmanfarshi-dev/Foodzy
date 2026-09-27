@@ -256,10 +256,10 @@ function ProductsDetails() {
           </p>
         </div>
 
-        <div className="mt-5 md:mt-10 lg:mt-16 flex justify-between">
+        <div className="mt-5 md:mt-10 lg:mt-16 flex justify-between flex-wrap">
           {data.slice(5, 10).map((items) => (
             <ProductCard
-              className="md:w-66!"
+               className="w-full sm:w-[calc(50%-8px)] md:w-[calc(33.33%-14px)] lg:w-[calc(20%-20px)]"
               thumbnail={items.thumbnail}
               title={items.title}
               des={items.description}

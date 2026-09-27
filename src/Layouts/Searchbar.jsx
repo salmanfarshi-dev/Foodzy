@@ -32,15 +32,20 @@ function Searchbar() {
               <MdOutlineAccountCircle className="size-6" />
               <span className="hidden md:block">Account</span>
             </div>
+            <Link to="wishlist">
+
             <div className="flex items-center gap-x-2 text-[15px] font-medium text-black cursor-pointer">
               <FaRegHeart className="size-6" />
 
-              <Link to="wishlist"><span className="hidden md:block">Wishlist</span></Link>
+             <span className="hidden md:block">Wishlist</span>
             </div>
+            </Link>
+           <Link to="/card">
             <div className="flex items-center gap-x-2 text-[15px] font-medium text-black cursor-pointer">
               <BsCart3 className="size-6" />
-             <Link to="card"> <span className="hidden md:block">Cart</span></Link>
+              <span className="hidden md:block">Cart</span>
             </div>
+           </Link>
           </div>
         </div>
       </div>

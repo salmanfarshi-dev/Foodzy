@@ -16,7 +16,7 @@ function ProductCard({off, thumbnail, title, des, rating, category, price, disco
         <img
           src={thumbnail}
           alt="image"
-          className="md:w-50 md:h-50 object-cover"
+          className="w-30 h-30  md:w-50 md:h-50 object-cover"
         />
       </div>
       <p className="text-xs font-lato font-normal text-secondary2 mt-2 md:mt-4 line-clamp-1">{title}</p>
