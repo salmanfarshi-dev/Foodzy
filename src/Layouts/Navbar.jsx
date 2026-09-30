@@ -58,7 +58,7 @@ function App() {
   }
         />
         <NavbarBrand className="ml-[20%] md:ml-0">
-         <img src="/logo.png" alt="" />
+         <img src="/public/logo (2).png" alt="" className="w-20 md:w-25" />
 
         </NavbarBrand>
       </NavbarContent>

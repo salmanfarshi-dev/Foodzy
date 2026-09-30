@@ -25,7 +25,7 @@ function WhyChoose() {
     <section className="bg-gray-100">
       <div className="max-w-360 mx-auto px-4 md:px-6 lg:px-0 pt-4 md:pt-7 lg:pt-12 pb-5 md:pb-10 lg:pb-20">
         <div className="flex flex-col md:flex-row gap-5 md:gap-16 lg:gap-20 justify-center">
-          <div className="md:w-100 h-100 overflow-hidden rounded-[29px]">
+          <div className="md:w-100 h-50 md:h-100 overflow-hidden rounded-[29px]">
             <img
               src="/left.png"
               alt=""
