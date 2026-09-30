@@ -2,8 +2,10 @@ import { Button } from "@heroui/react";
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaStar } from "react-icons/fa6";
+import { RiDeleteBinLine } from "react-icons/ri";
 
-function ProductCard({off, thumbnail, title, des, rating, category, price, discountPercentage, className}) {
+
+function ProductCard({off, thumbnail, title, des, rating, category, price, discountPercentage, className,ondelete, deleteicon}) {
   return (
     <div className={`w-full md:w-72.5 bg-white border border-border2 rounded-[15px] px-2 md:px-6 py-3 md:py-6 overflow-hidden relative hover:shadow-2xl transition duration-250 ${className}`}>
       {
@@ -12,6 +14,15 @@ function ProductCard({off, thumbnail, title, des, rating, category, price, disco
         <p className="text-white text-xs font-normal font-lato">{off}</p>
       </div>
       }
+
+ {
+  deleteicon &&  
+  <div className="absolute bg-[#F74B81] top-0 right-0 w-14 h-8 rounded-bl-[20px] flex justify-center items-center">
+      {deleteicon}
+
+      </div>
+ }
+
       <div className="flex justify-center items-center">
         <img
           src={thumbnail}
