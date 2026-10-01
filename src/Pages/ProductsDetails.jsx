@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PageBreadcrumb from "../Components/PageBreadcrumb";
-import { Button, Checkbox } from "@heroui/react";
+import { Button } from "@heroui/react";
 import { FaStar } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import ProductCard from "../Components/ProductCard";

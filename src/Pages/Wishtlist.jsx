@@ -33,6 +33,32 @@ function Wishtlist() {
             />
           ))}
         </div>
+
+         <div className="mt-5 md:mt-8 lg:mt-14">
+          <h4 className="text-center text-cardtittle text-xl md:text-[26px] lg:text-[30px] font-bold tracnking-[0.48px]">
+            Popular Products
+          </h4>
+          <p className="text-xs md:text-sm text-secondary2 text-center md:w-147.5 leading-5.5 mx-auto tracnking-[0.48px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et viverra maecenas accumsan
+            lacus vel facilisis.
+          </p>
+        </div>
+
+        <div className="mt-5 md:mt-10 lg:mt-16 mb-4 md:mb-10 lg:mb-16 flex justify-between flex-wrap">
+          {data.slice(20, 25).map((items) => (
+            <ProductCard
+               className="w-full sm:w-[calc(50%-8px)] md:w-[calc(33.33%-14px)] lg:w-[calc(20%-20px)]"
+              thumbnail={items.thumbnail}
+              title={items.title}
+              des={items.description}
+              rating={items.rating}
+              category={items.category}
+              price={items.price}
+              discountPercentage={items.discountPercentage}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
