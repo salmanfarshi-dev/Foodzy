@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import PageBreadcrumb from "../Components/PageBreadcrumb";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import ProductCard from "../Components/ProductCard";
+import { Link } from "react-router";
+import { Button } from "@heroui/react";
 
 function Card() {
   let [data, setData] = useState([]);
@@ -17,27 +19,27 @@ function Card() {
       <div className="max-w-360 mx-auto px-4 md:px-6 lg:px-0 mt-4 md:mt-7 lg:mt-12 mb-5 md:mb-10 lg:mb-15">
         <div className=" bg-border2 mt-5 md:mt-10 lg:mt-14 rounded ">
           <div className="grid grid-cols-[2fr_1fr_1fr_1fr_50px] items-center p-2 md:p-5">
-            {/* Product */}
+           
             <div className="text-xs md:text-sm lg:text-[15px] text-capitalize font-semibold font-quicksand">
               Product
             </div>
 
-            {/* Price */}
+           
             <div className="text-xs md:text-sm lg:text-[15px] text-capitalize font-semibold font-quicksand">
               Price
             </div>
 
-            {/* Quantity */}
+            
             <div className="text-xs md:text-sm lg:text-[15px] text-capitalize font-semibold font-quicksand">
               Quantity
             </div>
 
-            {/* Total */}
+            
             <div className="text-xs md:text-sm lg:text-[15px] text-capitalize font-semibold font-quicksand">
               Total
             </div>
 
-            {/* Action */}
+            
             <div className="text-xs md:text-sm lg:text-[15px] text-capitalize font-semibold font-quicksand">
               Action
             </div>
@@ -79,6 +81,12 @@ function Card() {
              
             </div>
           </div>
+        </div>
+
+        <div className="mt-2 md:mt-5 lg:mt-10 flex items-center justify-between">
+          <Link to="/" className="text-xs md:text-sm text-[#444444] font-normal hover:underline transition-all">Continue Shopping</Link>
+
+          <Button className="bg-primary text-white rounded  text-xs md:text-sm md:tracking-[0.48px]">Checkout</Button>
         </div>
 
         <div className="mt-5 md:mt-8 lg:mt-14">
